@@ -13,3 +13,19 @@ def funcao02() -> str:
 #funcao01()
 funcao02()
 funcao01(funcao02)
+
+
+def funcao(num: int) -> str:
+
+    def func02() -> str:
+        print("func02")
+    
+    def func03() -> str:
+        print("func03")
+    
+    if num == 1:
+        func02()
+    else:
+        func03()
+
+funcao(2)
