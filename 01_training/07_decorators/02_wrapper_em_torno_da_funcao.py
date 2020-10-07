@@ -1,5 +1,6 @@
 """
-Decorator para medir o tempo de execução de uma função, código
+Colocar um wrapper em torno de uma função, para adicionar um processamento extra
+wrapper(encapsulador)
 """
 
 import time
@@ -11,7 +12,6 @@ def runtime(func: Callable) -> Callable:
     """
     Decorator que informa o tempo de execução
     """
-
     @wraps(func)
     def wrapper(*args, **kwargs) -> float:
         start = time.time()
@@ -19,11 +19,10 @@ def runtime(func: Callable) -> Callable:
         end = time.time()
         print(func.__name__, end - start, "ms")
         return result
-
+    
     return wrapper
 
 
-# exemplo de uso
 @runtime
 def countdown(n: int) -> None:
     """

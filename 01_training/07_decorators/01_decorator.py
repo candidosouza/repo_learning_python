@@ -1,11 +1,22 @@
 """
-Decorators, acrecenta conteúdo a fução existente, sem alterar a prória
+Decorators, acrecenta conteúdo a fução existente, sem alterar a prória, mas alterando seu comportamento final.
+método para envolver uma função, modificando seu comportamento.
 """
 
-def fucao_decorator() -> str:
-    print("Funçao deocorator")
+from typing import Callable
 
 
-@funcao_decorator
+def decorator(funcao: Callable ) -> str:
+    def wrapper() -> str:
+        print ("Estou antes da execução da função passada como argumento")
+        funcao()
+        print ("Estou depois da execução da função passada como argumento")
+
+    return wrapper
+
+
+@decorator
 def funcao_normal() -> str:
-    print("Função Normal")
+    print ("Sou um belo argumento!")
+
+funcao_normal()
