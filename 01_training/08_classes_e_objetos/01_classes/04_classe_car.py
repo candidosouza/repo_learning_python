@@ -30,7 +30,7 @@ class Car():
 
 print('\n')
 
-my_my_car = Car("audi", "a4", 2020)
+my_car = Car("audi", "a4", 2020)
 print(my_car.get_description_name())
 my_car.update_odometer(777)
 my_car.read_odometer()
