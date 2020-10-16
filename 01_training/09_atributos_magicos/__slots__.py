@@ -49,7 +49,7 @@ class Bird():
     Simples temtativa de criar um pássaro
     """
     
-    __slots__ = ['_type']
+    __slots__ = ['__type']
     
     def __init__(self, type: str):
         """Inicializa o atributo type"""
