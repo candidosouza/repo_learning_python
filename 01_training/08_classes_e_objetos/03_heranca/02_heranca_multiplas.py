@@ -1,6 +1,6 @@
 """
 Herança multipla, é aceita em python,
-caso as classes tenham os mesmo método, prevalecerá a colocada em primeiro logar
+caso as classes tenham os mesmo método, prevalecerá a colocada em primeiro lugar
 """
 
 class A():
