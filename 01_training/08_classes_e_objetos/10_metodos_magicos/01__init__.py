@@ -4,10 +4,10 @@ da instancia após a classe ser criada.
 Use o __init__ quando você precisar controlar a inicialização de uma nova instancia.
 """
 
-class MethodMagicInit():
+class Example():
     
     def __init__(self, name: str):
-        self.__name: srt = name
+        self.__name: str = name
     
     @property
     def name(self) -> str:
@@ -18,5 +18,5 @@ class MethodMagicInit():
         self.__name = name
 
 
-method_init = MethodMagicInit("Candido")
-print(method_init.name)
+example = Example("Candido")
+print(example.name)
